@@ -1,0 +1,14 @@
+<!-- relative w/h 100%, text-align center -->
+<div class="" [style.background-color]="backgroundColor">
+  <!-- absolute left/top 0px, w/h 100% -->
+  <div class="cover"
+       [ngStyle]="{
+              'background-image': (revealImage && imageURL) ? 'url(' + imageURL  + ')' : ''
+            }"
+       [ngClass]="{
+                'reveal-image' : revealImage
+            }">
+  </div>
+  <!-- project the title. Inherits text-align center by default-->
+</div>
+<ng-content></ng-content>
