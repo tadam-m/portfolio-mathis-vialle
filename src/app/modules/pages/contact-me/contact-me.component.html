@@ -1,0 +1,131 @@
+<div class="flex flex-col w-screen">    <!-- Title -->
+  <div class="flex justify-center my-10" [@fadeInHalf]="true">
+    <div class="text-left text-white">
+      <h1 class="text-9xl font-bold">Contact</h1>
+    </div>
+  </div>
+  <div class="flex w-screen justify-center my-10" [@fadeInHalf]="true">
+    <div
+      class="max-w-240 md:min-w-160 sm:min-w-100 sm:-m-0.5 md:-m-6 max-h-screen  bg-card rounded-2xl border-t backdrop-filter backdrop-blur-lg bg-opacity-50 shadow-lg print:hidden">
+      <form
+        class="flex flex-col flex-auto p-6 sm:p-8 overflow-y-auto"
+        [formGroup]="composeForm">
+
+        <!-- To -->
+        <mat-form-field>
+          <mat-label>From</mat-label>
+          <input
+            matInput
+            [formControlName]="'to'">
+          <div
+            class="copy-fields-toggles"
+            matSuffix>
+                <span
+                  class="text-sm font-medium cursor-pointer select-none hover:underline"
+                  *ngIf="!copyFields.cc"
+                  (click)="showCopyField('cc')">
+                    Cc
+                </span>
+            <span
+              class="ml-2 text-sm font-medium cursor-pointer select-none hover:underline"
+              *ngIf="!copyFields.bcc"
+              (click)="showCopyField('bcc')">
+                    Bcc
+                </span>
+          </div>
+        </mat-form-field>
+
+        <!-- Cc -->
+        <mat-form-field
+          *ngIf="copyFields.cc">
+          <mat-label>Cc</mat-label>
+          <input
+            matInput
+            [formControlName]="'cc'">
+        </mat-form-field>
+
+        <!-- Bcc -->
+        <mat-form-field
+          *ngIf="copyFields.bcc">
+          <mat-label>Bcc</mat-label>
+          <input
+            matInput
+            [formControlName]="'bcc'">
+        </mat-form-field>
+
+        <!-- Subject -->
+        <mat-form-field>
+          <mat-label>Subject</mat-label>
+          <input
+            matInput
+            [formControlName]="'subject'">
+        </mat-form-field>
+
+        <!-- Body -->
+        <quill-editor
+          class="mt-2"
+          [formControlName]="'body'"
+          [modules]="quillModules"></quill-editor>
+
+        <!-- Actions -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between mt-4 sm:mt-6">
+          <div class="flex items-center mt-4 sm:mt-0">
+            <!-- Discard -->
+            <button
+              class="ml-auto sm:ml-0"
+              mat-stroked-button
+              (click)="discard()">
+              Discard
+            </button>
+            <!-- Send -->
+            <button
+              class=" sm:mx-3 order-first sm:order-last"
+              mat-flat-button
+              [color]="'primary'"
+              [disabled]="composeForm.invalid"
+              (click)="send()">
+              Send
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="flex items-center mt-8">
+    <div class="flex-auto mt-px border-t"></div>
+    <div class="mx-2 text-2xl">Or contact me with</div>
+    <div class="flex-auto mt-px border-t"></div>
+  </div>
+
+  <!-- Single sign-on buttons -->
+  <div class="flex items-center justify-center mt-8 space-x-10">
+    <button
+      (click)="linkedinRef()"
+      class="w-28"
+      type="button"
+      mat-stroked-button>
+      <mat-icon
+        class="icon-size-5"
+        [svgIcon]="'feather:linkedin'"></mat-icon>
+    </button>
+    <button
+      (click)="githubRef()"
+      class="w-28"
+      type="button"
+      mat-stroked-button>
+      <mat-icon
+        class="icon-size-5"
+        [svgIcon]="'feather:github'"></mat-icon>
+    </button>
+    <button
+      (click)="instagramRef()"
+      class="w-28"
+      type="button"
+      mat-stroked-button>
+      <mat-icon
+        class="icon-size-5"
+        [svgIcon]="'feather:instagram'"></mat-icon>
+    </button>
+  </div>
+</div>
+
