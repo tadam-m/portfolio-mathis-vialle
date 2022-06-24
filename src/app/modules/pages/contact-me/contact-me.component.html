@@ -1,12 +1,13 @@
 <div class="flex flex-col w-screen">    <!-- Title -->
   <div class="flex justify-center my-10" [@fadeInHalf]="true">
     <div class="text-left text-white">
-      <h1 class="text-9xl font-bold">Contact</h1>
+      <h1 class="text-8xl lg:text-9xl font-bold">Contact</h1>
     </div>
   </div>
   <div class="flex w-screen justify-center my-10" [@fadeInHalf]="true">
     <div
-      class="max-w-240 md:min-w-160 sm:min-w-100 sm:-m-0.5 md:-m-6 max-h-screen  bg-card rounded-2xl border-t backdrop-filter backdrop-blur-lg bg-opacity-50 shadow-lg print:hidden">
+      class="max-h-screen max-w-240 min-w-3/4 md:min-w-180 sm:min-w-140 lg:min-w-220 sm:-m-0.5 md:-m-6
+             bg-card rounded-2xl border-t backdrop-filter backdrop-blur bg-opacity-50 shadow print:hidden">
       <form
         class="flex flex-col flex-auto p-6 sm:p-8 overflow-y-auto"
         [formGroup]="composeForm">
