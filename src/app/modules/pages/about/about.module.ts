@@ -10,11 +10,14 @@ const aboutRoutes: Route[] = [
 ];
 
 @NgModule({
-  declarations: [
-    AboutComponent
-  ],
-  imports: [
-    RouterModule.forChild(aboutRoutes),
-  ]
+    declarations: [
+        AboutComponent
+    ],
+    exports: [
+        AboutComponent
+    ],
+    imports: [
+        // RouterModule.forChild(aboutRoutes),
+    ]
 })
 export class AboutModule { }

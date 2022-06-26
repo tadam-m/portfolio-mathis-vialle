@@ -1,100 +1,9 @@
-<!-- Loading bar -->
-<!--<fuse-loading-bar></fuse-loading-bar>-->
-
-<!-- Navigation -->
-<ng-container *ngIf="isScreenSmall">
-  <!--  <fuse-vertical-navigation-->
-  <!--    class="dark bg-gray-900 print:hidden"-->
-  <!--    [mode]="'over'"-->
-  <!--    [name]="'mainNavigation'"-->
-  <!--    [navigation]="navigation.default"-->
-  <!--    [opened]="false">-->
-  <!--    &lt;!&ndash; Navigation header hook &ndash;&gt;-->
-  <!--    <ng-container fuseVerticalNavigationContentHeader>-->
-  <!--      &lt;!&ndash; Logo &ndash;&gt;-->
-  <!--      <div class="flex items-center h-20 pt-6 px-8">-->
-  <!--        <img-->
-  <!--          class="w-24"-->
-  <!--          src="assets/images/logo/my-logo.png"-->
-  <!--          alt="Logo image">-->
-  <!--      </div>-->
-  <!--    </ng-container>-->
-  <!--  </fuse-vertical-navigation>-->
-</ng-container>
-
 <!-- Wrapper -->
-<div class="flex flex-col flex-auto w-full min-w-0">
-  <app-background [imageURL]="imageURL" [forceReflow]="forceReflow">
-  </app-background>
-
-  <!--    <h1 class="heading-text">{{title}}</h1>-->
-    <!--    &lt;!&ndash; Header &ndash;&gt;-->
-    <!--        <div class="relative flex flex-0 items-center w-full h-16 sm:h-20 px-4 md:px-6 z-49 shadow-none border-b bg-card bg-transparent print:hidden">-->
-    <!--          <ng-container *ngIf="!isScreenSmall">-->
-    <!--              &lt;!&ndash; Logo &ndash;&gt;-->
-    <!--              <div class="flex items-center mx-2 lg:mr-8">-->
-    <!--                  <div class="hidden lg:flex">-->
-    <!--                      <img-->
-    <!--                          class="dark:hidden w-24"-->
-    <!--                          src="assets/images/logo/logo-text.svg">-->
-    <!--                      <img-->
-    <!--                          class="hidden dark:flex w-24"-->
-    <!--                          src="assets/images/logo/logo-text-on-dark.svg">-->
-    <!--                  </div>-->
-    <!--                  <img-->
-    <!--                      class="flex lg:hidden w-8"-->
-    <!--                      src="assets/images/logo/logo.svg">-->
-    <!--              </div>-->
-    <!--          </ng-container>-->
-    <!--          &lt;!&ndash; Navigation toggle button &ndash;&gt;-->
-    <!--          <ng-container *ngIf="isScreenSmall">-->
-    <!--              <button-->
-    <!--                  mat-icon-button-->
-    <!--                  (click)="toggleNavigation('mainNavigation')">-->
-    <!--                  <mat-icon [svgIcon]="'heroicons_outline:menu'"></mat-icon>-->
-    <!--              </button>-->
-    <!--          </ng-container>-->
-    <!--          &lt;!&ndash; Components &ndash;&gt;-->
-    <!--          <div class="flex items-center pl-2 ml-auto space-x-0.5 sm:space-x-2">-->
-    <!--              <app-custom-button></app-custom-button>-->
-    <!--          </div>-->
-    <!--      </div>-->
-
-    <!-- Content -->
-    <!--    <div class="flex flex-col flex-auto w-full">-->
-    <!--  <div *ngIf="!isScreenSmall"-->
-    <!--       class="sticky top-0 z-10 backdrop-filter backdrop-blur-lg bg-opacity-30 bg-white dark:bg-default">-->
-    <!--    <div class="max-w-5xl mx-auto px-4">-->
-    <!--      <div class="flex items-center justify-between h-32">-->
-    <!--        <ng-container>-->
-    <!--          &lt;!&ndash; Logo &ndash;&gt;-->
-    <!--          <div class="flex items-center mx-2 lg:mr-8">-->
-    <!--            <div class="hidden lg:flex">-->
-    <!--              <img-->
-    <!--                class="dark:hidden w-24"-->
-    <!--                src="assets/images/logo/my-logo.png">-->
-    <!--              <img-->
-    <!--                class="hidden dark:flex w-24"-->
-    <!--                src="assets/images/logo/my-logo-dark.png">-->
-    <!--            </div>-->
-    <!--            <img-->
-    <!--              class="flex dark:hidden lg:hidden w-8"-->
-    <!--              src="assets/images/logo/my-logo.png">-->
-    <!--            <img-->
-    <!--              class="hidden dark:flex dark:lg:hidden w-8"-->
-    <!--              src="assets/images/logo/my-logo-dark.png">-->
-    <!--          </div>-->
-    <!--        </ng-container>-->
-    <!--        <div *ngIf="!isScreenSmall" class="flex space-x-4 text-gray-900">-->
-    <!--          <app-custom-button buttonTitle="Home"></app-custom-button>-->
-    <!--          <app-custom-button buttonTitle="About"></app-custom-button>-->
-    <!--          <app-custom-button buttonTitle="Skills"></app-custom-button>-->
-    <!--          <app-custom-button buttonTitle="Work"></app-custom-button>-->
-    <!--        </div>-->
-    <!--      </div>-->
-    <!--    </div>-->
-    <!--  </div>-->
-  <nav class="backdrop-filter backdrop-blur-lg bg-opacity-30 shadow-lg z-10">
+<!--<div class="flex flex-col flex-auto w-full min-w-0">-->
+<div class="flex flex-col flex-auto bg-white">
+<!--  <app-background [imageURL]="imageURL" [forceReflow]="forceReflow"></app-background>-->
+  <header class="sticky top-0 z-10 backdrop-filter backdrop-blur-sm bg-opacity-20 firefox:bg-opacity-70">
+  <nav class="border-t">
       <div class="max-w-6xl mx-auto px-4">
         <div class="flex justify-between">
           <div class="flex space-x-7">
@@ -107,23 +16,24 @@
             </div>
             <!-- Primary Navbar items -->
             <div class="hidden md:flex items-center space-x-1">
-              <!--            <a href="" class="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold ">Home</a>-->
             </div>
           </div>
-
           <!-- Secondary Navbar items -->
           <div class="hidden md:flex items-center space-x-3 ">
-            <app-custom-button buttonTitle="Home" (click)="homeNavigation()"></app-custom-button>
-            <app-custom-button buttonTitle="About" (click)="aboutNavigation()"></app-custom-button>
-            <app-custom-button buttonTitle="Skills"></app-custom-button>
-            <app-custom-button buttonTitle="Contact" (click)="contactMeNavigation()"></app-custom-button>
+<!--            <li>-->
+<!--            <a href="#target"> test</a>-->
+<!--            </li>-->
+
+            <app-custom-button buttonTitle="Home" (click)="scrollToElem('home')"></app-custom-button>
+            <app-custom-button buttonTitle="About" (click)="scrollToElem('about')"></app-custom-button>
+            <app-custom-button buttonTitle="Projects" data-scroll-to (click)="scrollToElem('projects')"></app-custom-button>
+            <app-custom-button buttonTitle="Contact" data-scroll-to (click)="scrollToElem('contact')"></app-custom-button>
           </div>
           <!-- Mobile menu button -->
           <div class="md:hidden flex items-center">
             <button class="outline-none mobile-menu-button"
                     (click)="showMenuMobile()">
               <svg class=" w-6 h-6 text-gray-500 hover:text-white"
-                   x-show="!showMenu"
                    fill="none"
                    stroke-linecap="round"
                    stroke-linejoin="round"
@@ -138,19 +48,22 @@
         </div>
       </div>
       <!-- mobile menu -->
-      <div *ngIf="this.showMenu && isScreenSmall" class="mobile-menu z-30">
+      <div *ngIf="showMenu && isScreenSmall" class="mobile-menu z-30">
         <ul class="">
-          <li class="active"><a (click)="homeNavigation()" class="block text-sm px-2 py-4 hover:bg-white hover:bg-opacity-20 transition duration-300">Home</a></li>
-          <li><a (click)="aboutNavigation()" class="block text-sm px-2 py-4 hover:bg-white hover:bg-opacity-20 transition duration-300">About</a>
+          <li class="active"><a (click)="scrollToElem('home')" class="block text-sm px-2 py-4 hover:bg-white hover:bg-opacity-20 transition duration-300">Home</a></li>
+          <li><a (click)="scrollToElem('about')" class="block text-sm px-2 py-4 hover:bg-white hover:bg-opacity-20 transition duration-300">About</a>
           </li>
-          <li><a (click)="aboutNavigation()" class="block text-sm px-2 py-4 hover:bg-white hover:bg-opacity-20 transition duration-300">Skills</a></li>
-          <li><a (click)="contactMeNavigation()" class="block text-sm px-2 py-4 hover:bg-white hover:bg-opacity-20 transition duration-300">Contact</a>
+          <li><a (click)="scrollToElem('projects')" class="block text-sm px-2 py-4 hover:bg-white hover:bg-opacity-20 transition duration-300">Skills</a></li>
+          <li><a (click)="scrollToElem('contact')" class="block text-sm px-2 py-4 hover:bg-white hover:bg-opacity-20 transition duration-300">Contact</a>
           </li>
         </ul>
       </div>
     </nav>
-    <router-outlet *ngIf="true"></router-outlet>
+  </header>
 
+  <div #scrollContent data-scroll-container>
+    <router-outlet *ngIf="true"></router-outlet>
+  </div>
     <!-- Footer -->
 <!--      <div class="relative flex flex-0 items-center h-16 sm:h-20 px-6 sm:px-8 z-49 bg-card border-t dark:bg-default print:hidden">-->
     <div

@@ -1,66 +1,69 @@
-<div class="flex flex-col flex-auto">
-  <div class="flex flex-col justify-center items-center h-full">
-    <h2 class="text-xl font-semibold"
-        [@fadeInTop]="false">
-      Hi, I'm Mathis</h2>
-    <div class="text-4xl sm:text-7xl font-extrabold tracking-tight leading-tight text-center"
-         [@fadeInTop]="false">
-      Let's build our next experience together
+<!--<div class="flex flex-col flex-auto">-->
+<!--  <div class="flex flex-col justify-center items-center h-full">-->
+<!--    <h2 class="text-xl font-semibold"-->
+<!--        [@fadeInTop]="false">-->
+<!--      Hi, I'm Mathis</h2>-->
+<!--    <div class="text-4xl sm:text-7xl font-extrabold tracking-tight leading-tight text-center"-->
+<!--         [@fadeInTop]="false">-->
+<!--      Let's build our next experience together-->
+<!--    </div>-->
+<!--    <div class="mt-3 sm:text-2xl text-center tracking-tight text-secondary"-->
+<!--         [@fadeInTop]="false">-->
+<!--      <div class="">Web Developer</div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="flex flex-col justify-center items-center h-full">-->
+<!--    <app-about></app-about>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--<div data-scroll-container>-->
+<!--  <section data-scroll-section>-->
+<!--    <h1 data-scroll>Hey</h1>-->
+<!--    <p data-scroll>👋</p>-->
+<!--  </section>-->
+<!--  <section data-scroll-section>-->
+<!--    <h2 data-scroll data-scroll-speed="1">What's up?</h2>-->
+<!--    <p data-scroll data-scroll-speed="2">😬</p>-->
+<!--  </section>-->
+<!--</div>-->
+<div x-data class="w-full bg-black">
+  <section id="home" data-scroll-section class="flex flex-col h-screen items-center justify-center bg-cover bg-center"
+           style="background-image: url('https://i.ibb.co/tPzCLF9/pexels-inchs-6702562.jpg')">
+    <app-home></app-home>
+  </section>
+  <section id="about" data-scroll-section class="flex flex-col h-auto items-center bg-cover bg-center"
+           style="background-image: url('https://i.ibb.co/ts3h0X8/pexels-pixabay-236968.jpg')">
+    <app-about></app-about>
+  </section>
+  <section id="contact" data-scroll-section class="flex flex-col h-screen items-center justify-center bg-cover bg-center"
+           style="background-image: url('https://i.ibb.co/7GdfHpD/pexels-maverick-f-10820363.jpg')">
+    <app-contact-me></app-contact-me>
+  </section>
+  <section data-scroll-section
+    class="flex my-30 h-20 z-49
+    justify-center
+    bg-card border-t backdrop-filter backdrop-blur-lg bg-opacity-10 shadow-lg print:hidden">
+    <div class="text-center p-4">
+      © 2022 Mathis Vialle
     </div>
-    <div class="mt-3 sm:text-2xl text-center tracking-tight text-secondary"
-         [@fadeInTop]="false">
-      <div class="">Web Developer</div>
-    </div>
-    </div>
+  </section>
 </div>
 
-<!--    <div class="z-10 flex align-center content-center">-->
-<!--&lt;!&ndash;      <h2 class="text-xl font-semibold">Hi, I'm Mathis</h2>&ndash;&gt;-->
-<!--&lt;!&ndash;      <div class="mt-1 text-4xl sm:text-7xl font-extrabold tracking-tight leading-tight text-center">&ndash;&gt;-->
-<!--&lt;!&ndash;        What do you want to learn today?&ndash;&gt;-->
-<!--&lt;!&ndash;      </div>&ndash;&gt;-->
-<!--      <div class="max-w-2xl mt-6 sm:text-2xl text-center tracking-tight text-secondary">-->
-<!--        Web Developer-->
-<!--      </div>-->
-<!--    </div>-->
-<!--</div>-->
-<!--  <div class="text-4xl font-extrabold tracking-tight leading-none ml-1.5">All Activities</div>-->
-<!--  <div class="mt-1.5 text-lg text-secondary">Application wide activities are listed here as individual items, starting with the most recent.</div>-->
-<!--  <div class="text-2xl md:text-5xl font-semibold tracking-tight leading-7 md:leading-snug truncate">Hey, I'm Mathis!</div>-->
-
-<!--  <div class="curve-body">-->
-<!--  <section>-->
-<!--    <div class="content">-->
-<!--      <h2>Hi I'm Mathis 👋</h2>-->
-<!--      <p>Learn stuff from another hooman being.</p>-->
-<!--    </div>-->
+<!--  <section data-scroll-section class="flex flex-col h-screen items-center justify-center bg-cover bg-center"-->
+<!--           style="background-image: url('https://i.ibb.co/7GdfHpD/pexels-maverick-f-10820363.jpg')">-->
+<!--    <app-contact-me></app-contact-me>-->
 <!--  </section>-->
+<!--</div>-->
+
+<!--<div x-data class="w-full">-->
+<!--  <div class="flex flex-col h-screen items-center justify-center">-->
+<!--    <app-home></app-home>-->
 <!--  </div>-->
-<!-- Main -->
-<!--  <div class="body-screen">-->
-<!--      &lt;!&ndash; Card 1 &ndash;&gt;-->
-<!--      <div class="container">-->
-<!--        <div class="card">-->
-<!--          <div class="content">-->
-<!--            <h2>01</h2>-->
-<!--            <h3>Card One</h3>-->
-<!--            <p>test text into this card</p>-->
-<!--          </div>-->
-<!--          <a href="#">Read More</a>-->
-<!--        </div>-->
-<!--      </div>-->
-
-<!--      &lt;!&ndash; Card 2 &ndash;&gt;-->
-<!--      <div class="container">-->
-<!--        <div class="card">-->
-<!--          <div class="content">-->
-<!--            <h2>02</h2>-->
-<!--            <h3>Card Two</h3>-->
-<!--            <p>test text into this card</p>-->
-<!--          </div>-->
-<!--          <a href="#">Read More</a>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-
+<!--  <section class="flex flex-col h-screen  items-center justify-center">-->
+<!--    <app-about></app-about>-->
+<!--  </section>-->
+<!--  <section class="flex flex-col h-screen items-center justify-center">-->
+<!--    <app-contact-me></app-contact-me>-->
+<!--  </section>-->
 <!--</div>-->
