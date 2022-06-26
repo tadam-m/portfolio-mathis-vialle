@@ -33,14 +33,13 @@ export const appRoutes: Route[] = [
               initialData: InitialDataResolver,
           },
         children: [
-          {path: 'about',  data: {resolvedData: {imageURL: baseImageURL + '/RydWZkk/pexels-jo-o-jesus-925743.jpg', title: 'Page One'}},
-            loadChildren: () => import('app/modules/pages/about/about.module').then(m => m.AboutModule)},
-          {path: 'home', data: {resolvedData: {imageURL: baseImageURL + '/RydWZkk/pexels-jo-o-jesus-925743.jpg', title: 'Page Two'}},
-              loadChildren: () => import('app/modules/admin/example/example.module').then(m => m.ExampleModule)},
-          {path: 'contact', data: {resolvedData: {imageURL: baseImageURL + '/NLt5vZv/pexels-eberhard-grossgasteiger-691668.jpg', title: 'Page Two'}},
-            loadChildren: () => import('app/modules/pages/contact-me/contact-me.module').then(m => m.ContactMeModule)},
-          {path: 'skills', data: {resolvedData: {imageURL: baseImageURL + '/NLt5vZv/pexels-eberhard-grossgasteiger-691668.jpg', title: 'Page Two'}},
-            loadChildren: () => import('app/modules/pages/skills/skills.module').then(m => m.SkillsModule)}
+          // {path: 'about',  data: {resolvedData: {imageURL: baseImageURL + '/RydWZkk/pexels-jo-o-jesus-925743.jpg', title: 'Page One'}},
+          //   loadChildren: () => import('app/modules/pages/about/about.module').then(m => m.AboutModule)},
+          {path: 'home', loadChildren: () => import('app/modules/admin/example/example.module').then(m => m.ExampleModule)},
+          // {path: 'contact', data: {resolvedData: {imageURL: baseImageURL + '/NLt5vZv/pexels-eberhard-grossgasteiger-691668.jpg', title: 'Page Two'}},
+          //   loadChildren: () => import('app/modules/pages/contact-me/contact-me.module').then(m => m.ContactMeModule)},
+          // {path: 'skills', data: {resolvedData: {imageURL: baseImageURL + '/NLt5vZv/pexels-eberhard-grossgasteiger-691668.jpg', title: 'Page Two'}},
+          //   loadChildren: () => import('app/modules/pages/skills/skills.module').then(m => m.SkillsModule)}
         ]
     },
   // plongeur <img src="https://i.ibb.co/tPzCLF9/pexels-inchs-6702562.jpg" alt="pexels-inchs-6702562" border="0">
