@@ -93,9 +93,11 @@ export class ModernLayoutComponent implements OnInit, OnDestroy, AfterViewInit {
       el: document.querySelector('[data-scroll-container]'),
       smooth: true,
       mobile: {
-       smooth: false
+        breakpoint: 0,
+        smooth: false
       },
       tablet: {
+       breakpoint: 0,
        smooth: false
       }
     });
