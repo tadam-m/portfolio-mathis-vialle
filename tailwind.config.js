@@ -2,6 +2,7 @@ const path = require('path');
 const colors = require('tailwindcss/colors');
 const defaultTheme = require('tailwindcss/defaultTheme');
 const generatePalette = require(path.resolve(__dirname, ('src/@fuse/tailwind/utils/generate-palette')));
+const plugin = require('tailwindcss/plugin');
 
 /**
  * Custom palettes
@@ -85,7 +86,7 @@ const config = {
             '9xl' : '6rem',
             '10xl': '8rem'
         },
-        screens : {
+      screens : {
             sm: '600px',
             md: '960px',
             lg: '1280px',
@@ -293,7 +294,22 @@ const config = {
         // Other third party and/or custom plugins
         require('@tailwindcss/typography')({modifiers: ['sm', 'lg']}),
         require('@tailwindcss/aspect-ratio'),
-        require('@tailwindcss/line-clamp')
+        require('@tailwindcss/line-clamp'),
+      plugin(function ({ addVariant, e, postcss }) {
+        addVariant('firefox', ({ container, separator }) => {
+          const isFirefoxRule = postcss.atRule({
+            name: '-moz-document',
+            params: 'url-prefix()',
+          });
+          isFirefoxRule.append(container.nodes);
+          container.append(isFirefoxRule);
+          isFirefoxRule.walkRules((rule) => {
+            rule.selector = `.${e(
+              `firefox${separator}${rule.selector.slice(1)}`
+            )}`;
+          });
+        });
+      }),
     ]
 };
 

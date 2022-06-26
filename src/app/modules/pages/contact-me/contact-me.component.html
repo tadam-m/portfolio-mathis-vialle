@@ -1,12 +1,11 @@
-<div class="flex flex-col w-screen">    <!-- Title -->
-  <div class="flex justify-center my-10" [@fadeInHalf]="true">
-    <div class="text-left text-white">
+<div data-scroll data-scroll-speed="3" class="my-10" x-intersect="$el.classList.add('fadeInUp')">
+    <div data-scroll data-scroll-id="stick" class="text-center text-white">
       <h1 class="text-8xl lg:text-9xl font-bold">Contact</h1>
     </div>
   </div>
-  <div class="flex w-screen justify-center my-10" [@fadeInHalf]="true">
-    <div
-      class="max-h-screen max-w-240 min-w-3/4 md:min-w-180 sm:min-w-140 lg:min-w-220 sm:-m-0.5 md:-m-6
+  <div class="justify-center my-10" [@fadeInHalf]="true">
+    <div data-scroll data-scroll-speed="3"
+          class="max-h-screen max-w-240 min-w-3/4 md:min-w-180 sm:min-w-140 lg:min-w-220 sm:-m-0.5 md:-m-6
              bg-card rounded-2xl border-t backdrop-filter backdrop-blur bg-opacity-50 shadow print:hidden">
       <form
         class="flex flex-col flex-auto p-6 sm:p-8 overflow-y-auto"
@@ -92,14 +91,14 @@
       </form>
     </div>
   </div>
-  <div class="flex items-center mt-8">
+  <div data-scroll data-scroll-speed="3" class="flex items-center mt-8">
     <div class="flex-auto mt-px border-t"></div>
     <div class="mx-2 text-2xl">Or contact me with</div>
     <div class="flex-auto mt-px border-t"></div>
   </div>
 
   <!-- Single sign-on buttons -->
-  <div class="flex items-center justify-center mt-8 space-x-10 mx-2">
+  <div data-scroll data-scroll-speed="3" class="flex items-center justify-center mt-8 space-x-10 mx-2">
     <button
       (click)="linkedinRef()"
       class="w-28"
@@ -128,5 +127,5 @@
         [svgIcon]="'feather:instagram'"></mat-icon>
     </button>
   </div>
-</div>
+<!--</div>-->
 

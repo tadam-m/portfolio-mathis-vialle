@@ -20,10 +20,12 @@
 }
 
 .btn-1 {
+  opacity: 100;
   color: var(--text-color);
 }
 
 .btn-1::after, .btn-1::before {
+  opacity: 100;
   border: 3px solid var(--btn-bg-color);
   content: '';
   position: absolute;

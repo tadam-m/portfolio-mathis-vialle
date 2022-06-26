@@ -18,18 +18,21 @@ const contactRoute: Route[] = [
 ];
 
 @NgModule({
-  declarations: [
-    ContactMeComponent
-  ],
-  imports: [
-    CommonModule,
-    SharedModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatIconModule,
-    MatButtonModule,
-    QuillModule,
-    RouterModule.forChild(contactRoute),
-  ]
+    declarations: [
+        ContactMeComponent
+    ],
+    exports: [
+        ContactMeComponent
+    ],
+    imports: [
+        CommonModule,
+        SharedModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatIconModule,
+        MatButtonModule,
+        QuillModule,
+        // RouterModule.forChild(contactRoute),
+    ]
 })
 export class ContactMeModule { }
