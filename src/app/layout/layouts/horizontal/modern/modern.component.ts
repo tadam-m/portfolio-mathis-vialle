@@ -94,11 +94,11 @@ export class ModernLayoutComponent implements OnInit, OnDestroy, AfterViewInit {
       smooth: true,
       mobile: {
         breakpoint: 0,
-        smooth: false
+        smooth: true
       },
       tablet: {
        breakpoint: 0,
-       smooth: false
+       smooth: true
       }
     });
   }
