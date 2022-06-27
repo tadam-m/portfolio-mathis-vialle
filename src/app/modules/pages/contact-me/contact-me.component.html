@@ -1,9 +1,9 @@
 <div class="md:container md:mx-auto my-10">
     <div class="text-center text-white">
-      <h1 data-scroll data-scroll-sticky class="text-8xl lg:text-9xl font-bold">Contact</h1>
+      <h1 data-scroll data-scroll-speed="3" data-scroll-delay="0.05" class="text-8xl lg:text-9xl font-bold">Let's Talk</h1>
     </div>
   </div>
-    <div data-scroll data-scroll-sticky
+    <div data-scroll data-scroll-speed="3" data-scroll-delay="0.05"
           class="max-w-240 min-w-3/4 md:min-w-180 sm:max-w-80 lg:min-w-220 sm:-m-0.5 md:-m-6
              bg-card rounded-2xl border-t backdrop-filter backdrop-blur bg-opacity-50 shadow print:hidden">
       <form
@@ -88,15 +88,15 @@
         </div>
       </form>
     </div>
-  <div data-scroll data-scroll-sticky class="flex flex-col items-center mt-8">
+  <div data-scroll data-scroll-speed="3" data-scroll-delay="0.05" class="flex flex-col items-center mt-8">
     <div class="flex-auto mt-px border-t"></div>
     <div class="mx-2 text-2xl">Or contact me with</div>
     <div class="flex-auto mt-px border-t"></div>
   </div>
 
   <!-- Single sign-on buttons -->
-  <div data-scroll data-scroll-sticky class="flex items-center justify-center my-8 space-x-10 mx-2">
-    <button
+  <div class="flex items-center justify-center my-8 space-x-10 mx-2">
+    <button data-scroll data-scroll-speed="6" data-scroll-delay="0.8"
       (click)="linkedinRef()"
       class="w-28"
       type="button"
@@ -105,7 +105,7 @@
         class="icon-size-5"
         [svgIcon]="'feather:linkedin'"></mat-icon>
     </button>
-    <button
+    <button data-scroll data-scroll-speed="6" data-scroll-delay="0.10"
       (click)="githubRef()"
       class="w-28"
       type="button"
@@ -114,7 +114,7 @@
         class="icon-size-5"
         [svgIcon]="'feather:github'"></mat-icon>
     </button>
-    <button
+    <button data-scroll data-scroll-speed="6" data-scroll-delay="0.9"
       (click)="instagramRef()"
       class="w-28"
       type="button"
