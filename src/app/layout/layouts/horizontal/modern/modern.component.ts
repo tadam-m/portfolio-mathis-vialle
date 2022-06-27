@@ -92,6 +92,14 @@ export class ModernLayoutComponent implements OnInit, OnDestroy, AfterViewInit {
     this.scroll = new LocomotiveScroll({
       el: document.querySelector('[data-scroll-container]'),
       smooth: true,
+      mobile: {
+        breakpoint: 0,
+        smooth: false
+      },
+      tablet: {
+       breakpoint: 0,
+       smooth: false
+      }
     });
   }
 
